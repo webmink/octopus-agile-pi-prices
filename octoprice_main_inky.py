@@ -351,7 +351,7 @@ else: #high res display
 	#lowest_price_next_24h = min(i for i in prices if i > 0)
 	lowest_price_next_24h = min(i for i in prices)
 	if (lowest_price_next_24h < 0):
-		chart_base_loc = 104 + lowest_price_next_24h*pixels_per_h - 2 # if we have any negative prices, shift the base of the graph up! 
+		chart_base_loc = chart_base_loc + lowest_price_next_24h*pixels_per_h - 2 # if we have any negative prices, shift the base of the graph up! 
 
 	print("lowest price Position:", prices.index(lowest_price_next_24h))
 	print("low Value:", lowest_price_next_24h)
