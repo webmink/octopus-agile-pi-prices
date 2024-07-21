@@ -395,9 +395,9 @@ else: #high res display
 	time_of_cheapest = the_now_local + datetime.timedelta(minutes=min_offset)
 	print("cheapest at " + str(time_of_cheapest))
 	print("which is: "+ str(time_of_cheapest.time())[0:5])
-	time_of_cheapest_formatted = "at " + (str(time_of_cheapest.time())[0:5])
-	font = ImageFont.truetype(FredokaOne, 16)
-	draw.text((right_column,101), time_of_cheapest_formatted, inky_display.BLACK, font)
+	time_of_cheapest_formatted = "Updated " + (str(the_now_local.time())[0:5])
+	font = ImageFont.truetype(FredokaOne, 11)
+	draw.text((right_column,105), time_of_cheapest_formatted, inky_display.BLACK, font)
 
 
 # render the actual image onto the display
